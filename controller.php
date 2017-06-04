@@ -1,4 +1,6 @@
 <?php
+
+$spawn = "Location: /MultiCulti";
  
 require_once('db_functions.php');
 
@@ -13,7 +15,7 @@ if(isset($_GET['id']))
     log_user_in($name, $pass);
     
  
-    header('Location: /');
+    header($spawn);
     exit();
 }
 
