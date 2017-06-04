@@ -48,8 +48,20 @@
     
     <!-- LOGGED IN CONTENT -->
     
-    Welcome <?php echo $_SESSION['user']; ?> <br>
-    <a href="logout.php"><button>logout</button></a>
+    <div class="cmdWrapper">
+    <tc>
+        <div class="userField">
+            <div class="userTopSection">
+                <div class="pp"></div>
+                <div class="name"><?php echo $_SESSION['user']; ?></div>
+                <a href="logout.php"><img class="turn_off" src="img/turn-off.png" title="Logout"></a>
+            </div>    
+            <div class="navigator">
+            </div>
+        
+        </div>
+    </tc>
+    </div>
     
     <!-- ----------------- -->
     <?php } else { ?>

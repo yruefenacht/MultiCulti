@@ -52,6 +52,8 @@ button, input[type="button"], input[type="submit"]{
 html, body{
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
     background: #e5e5e5;
 }
 tc{
@@ -132,18 +134,76 @@ h1{
     0%{
         opacity: 1;
     }
-    50%{
+    80%{
         opacity: 1;
     }
     100%{
         opacity: 0;
     }
 }
-.visible{
-    display: block;
+.cmdWrapper{
+    display: table;
+    width: 100%;
+    height: 100%;
 }
-.profile_pic{
-    width: 100px;
+
+.userField{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0px 0px 15px 0px rgba(8, 8, 8, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 40px;
+    animation: userField 1s forwards;
+}
+@keyframes userField{
+    100%{
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+.userTopSection{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    box-shadow: inset 0px -50px 40px 0px rgba(8, 8, 8, 0.5);
+}
+.pp{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 4%;
+    bottom: -40px;
     border-radius: 50%;
-    margin: 1em auto;
+    border: 2px solid white;
+    background: url(../img/pp.jpg);
+    background-size: cover;
+}
+.name{
+    width: 200px;
+    position: absolute;
+    bottom: 4%;
+    left: 130px;
+    text-align: left;
+    font-size: 1.6em;
+    letter-spacing: 0.2em;
+    color: white;
+}
+.turn_off{
+    width: 20px;
+    position: absolute;
+    bottom: 5%;
+    right: 3%;
+    cursor: pointer;
+}
+.navigator{
+    
 }

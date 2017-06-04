@@ -33,9 +33,9 @@ function log_user_in($username, $password){
         
         $_SESSION['login_failed'] = true;
         
-    }
-    
-    
+    } 
 }
+
+
 
 ?>
