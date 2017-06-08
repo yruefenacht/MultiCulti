@@ -3,7 +3,8 @@
 require_once('ConnectionHandler.php');
 
 
-function log_user_in($username, $password){
+function log_user_in($username, $password)
+{
     
     $query = "SELECT username, password, salt FROM user";
 
@@ -34,6 +35,23 @@ function log_user_in($username, $password){
         $_SESSION['login_failed'] = true;
         
     } 
+}
+
+
+function register_user($username, $password)
+{
+    $salt = uniqid(mt_rand(), true);
+    
+    $password = crypt($password, $salt);
+    
+    $query = "insert into user (username, password, salt) values (?,?,?);";
+    
+    $statement = ConnectionHandler::getConnection()->prepare($query);
+    $statement->bind_param("sss", $username, $password, $salt);
+    
+    if (!$statement->execute()) {
+        throw new Exception($statement->error);
+    }
 }
 
 

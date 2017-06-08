@@ -21,7 +21,7 @@ if(isset($_GET['id']))
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-        echo $username;
+        register_user($username, $password); 
         
     }
  
