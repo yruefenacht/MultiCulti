@@ -1,0 +1,7 @@
+1     Situationsanalyse 
+1.1   Anforderungen
+Der Auftraggeber verlangt von uns eine Webseite, auf welche man sich mit einem User einloggen kann und diese dann per Session (Cookies), auch beim verlassen der Seite, ohne Login wieder zugreifen nach (30 min).
+ 
+ 
+2     Umsetzungsmethode
+2.2   Tools
