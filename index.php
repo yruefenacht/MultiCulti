@@ -55,8 +55,34 @@
                 <div class="pp"></div>
                 <div class="name"><?php echo $_SESSION['user']; ?></div>
                 <a href="logout.php"><img class="turn_off" src="img/turn-off.png" title="Logout"></a>
-            </div>    
+            </div> 
+            <!-- USER SECTION 1 -->
+            <div class="userContent" id="uc1">Welcome</div>
+            
+            <!-- USER SECTION 2 -->
+            <div class="userContent" id="uc2" hidden>
+                <input class="commandline" type="text" placeholder="Command line" />&emsp;
+                <input type="submit" class="submit_button" id="commandButton" value="send" name="command">
+            </div>
+            
+            <!-- USER SECTION 3 -->
+            <div class="userContent" id="uc3" hidden>
+            
+            <form method="post" action="?id=register">
+                
+                <input class="commandline" id="reg_input" type="text" placeholder="username" name="username"/>
+                
+                <input class="commandline" id="reg_input" type="password" placeholder="password" name="password" /><br>
+            
+                <input type="submit" class="submit_button" value="add new user" name="command" id="reg_submit">
+            </form>
+            </div>
+            
+            <!-- NAVIGATOR -->
             <div class="navigator">
+                <div class="menu_point"><img value="1" class="mp_icon" src="img/user.png" id="mp1"></div>
+                <div class="menu_point"><img value="2" class="mp_icon" src="img/search.png"></div>
+                <div class="menu_point"><img value="3" class="mp_icon" src="img/add.png"></div>
             </div>
         
         </div>
@@ -81,7 +107,7 @@
                 
             <div class="login_error">Login inkorrekt</div>
                 
-            <input type="submit" class="login_submit" value="login" name="login">
+            <input type="submit" class="submit_button" value="login" name="login">
                 
             </form>
             
