@@ -1,6 +1,11 @@
 <?php
 
 /**
+
+
+Diese Datei wurde NICHT von MultiCulti(unserem Team (Yannick Phetvanxai Varshan Martin)) selbts erstellt SONDERN von der ICT-Berufsbildung Bern
+
+
  * Der ConnectionHandler ist dafür zuständig, allen Models ein und die selbe
  * Verbindung auf die Datenbank zur Verfügung zu stellen.
  *

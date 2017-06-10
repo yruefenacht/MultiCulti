@@ -40,10 +40,19 @@
       
   </head>
     
+    <?php
+    //configure logs
+    ini_set('log_errors', 1);
+    ini_set('error_log', 'log/errors.txt');
+    error_reporting(E_ALL);
+    ?>
+    
+    
     <?php require_once('controller.php'); ?>
     
 <body>
     
+
     <?php if(isset($_SESSION['user'])){ ?>
     
     <!-- LOGGED IN CONTENT -->

@@ -31,8 +31,7 @@ if(isset($_GET['id']))
 }
 
 if(isset($_SESSION['login_failed']))
-{
-        
+{  
     echo "<script>$(document).ready(function(){ show_login_error();});</script>";
     
     unset($_SESSION['login_failed']);

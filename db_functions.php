@@ -1,16 +1,17 @@
 <?php
 
+/*Diese Datei wurde selbst erstellt*/
+
 require_once('ConnectionHandler.php');
 
 
 function log_user_in($username, $password)
 {
-    
     $query = "SELECT username, password, salt FROM user";
 
     $statement = ConnectionHandler::getConnection()->prepare($query);
     $statement->execute();
-
+        
     $result = $statement->get_result();
     if (!$result) {
         throw new Exception($statement->error);
@@ -31,7 +32,6 @@ function log_user_in($username, $password)
         
         
     }else{
-        
         $_SESSION['login_failed'] = true;
         
     } 
@@ -52,6 +52,7 @@ function register_user($username, $password)
     if (!$statement->execute()) {
         throw new Exception($statement->error);
     }
+
 }
 
 
