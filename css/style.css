@@ -158,16 +158,8 @@ h1{
     background: white;
     position: relative;
     overflow: hidden;
-    opacity: 0;
-    margin-top: 40px;
-    animation: userField 1s forwards;
 }
-@keyframes userField{
-    100%{
-        opacity: 1;
-        margin-top: 0;
-    }
-}
+
 .userTopSection{
     position: relative;
     width: 100%;
@@ -240,6 +232,9 @@ h1{
     font-size: 1.5em;
     margin-top: 40%;
 }
+#uc2{
+    margin-top: 0%;
+}
 #uc3{
     margin-top: 15%;
 }
@@ -264,4 +259,24 @@ h1{
     font-size: 0.6em;
     width: 230px;
     margin-top: 7%;
+}
+fieldset{
+    margin: 0.5em auto;
+    float: left;
+}
+input[type='radio']{
+    float: left;
+    margin-left: 1em;
+}
+label{
+    float: left;
+    padding-left: 0.5em;
+}
+.output{
+    margin: 0 auto;
+    border: 1px solid rgba(8, 8, 8, 0.1);
+    width: 370px;
+    height: 150px;
+    overflow-y: auto;
+    text-align: left;
 }

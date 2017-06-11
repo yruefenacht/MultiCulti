@@ -38,4 +38,7 @@ $(document).ready(function(){
         
     });
     
+    
+    //handle GUI Pages
+    
 });

@@ -70,8 +70,37 @@
             
             <!-- USER SECTION 2 -->
             <div class="userContent" id="uc2" hidden>
-                <input class="commandline" type="text" placeholder="Command line" />&emsp;
-                <input type="submit" class="submit_button" id="commandButton" value="send" name="command">
+                
+                <form method="get">
+                    
+                <input class="commandline" type="text" placeholder="System command" name="syscommand"/>&emsp;
+                <input type="submit" class="submit_button" id="commandButton" value="send" >
+                
+                <br>
+                <fieldset>
+                <input type="radio" id="print" name="sysopt" value="print" checked>
+                <label for="print">print</label>
+                <input type="radio" id="cd" name="sysopt" value="cd">
+                <label for="cd">cd</label>
+                <input type="radio" id="dir" name="sysopt" value="dir">
+                <label for="dir">dir</label> 
+                <input type="radio" id="help" name="sysopt" value="help">
+                <label for="help">help</label>
+                </fieldset>
+                    
+                </form>
+                
+                <textarea class="output" style="resize:none;">
+                <?php 
+                    if(isset($_SESSION['output'])){
+                        echo $_SESSION['output']; 
+                        unset($_SESSION['output']);
+                    }else{ 
+                        echo 'Output'; 
+                    } 
+                ?>
+                </textarea>
+                
             </div>
             
             <!-- USER SECTION 3 -->
