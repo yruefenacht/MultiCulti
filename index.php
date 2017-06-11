@@ -90,7 +90,7 @@
                     
                 </form>
                 
-                <textarea class="output" style="resize:none;">
+                <div class="output" contenteditable>
                 <?php 
                     if(isset($_SESSION['output'])){
                         echo $_SESSION['output']; 
@@ -99,7 +99,7 @@
                         echo 'Output'; 
                     } 
                 ?>
-                </textarea>
+                </div>
                 
             </div>
             
@@ -119,7 +119,7 @@
             <!-- NAVIGATOR -->
             <div class="navigator">
                 <div class="menu_point"><img value="1" class="mp_icon" src="img/user.png" id="mp1"></div>
-                <div class="menu_point"><img value="2" class="mp_icon" src="img/search.png"></div>
+                <div class="menu_point"><img value="2" class="mp_icon" src="img/search.png" id="mp2"></div>
                 <div class="menu_point"><img value="3" class="mp_icon" src="img/add.png"></div>
             </div>
         

@@ -29,7 +29,6 @@ function log_user_in($username, $password)
     if($logged_in){
         
         $_SESSION['user'] = $username;
-        $_SESSION['page'] = 1;
         
         
     }else{
