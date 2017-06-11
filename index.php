@@ -90,7 +90,7 @@
                     
                 </form>
                 
-                <div class="output" contenteditable>
+                <textarea class="output" style="resize:none" readonly>
                 <?php 
                     if(isset($_SESSION['output'])){
                         echo $_SESSION['output']; 
@@ -99,7 +99,7 @@
                         echo 'Output'; 
                     } 
                 ?>
-                </div>
+                </textarea>
                 
             </div>
             
