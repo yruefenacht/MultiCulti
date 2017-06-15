@@ -20,7 +20,7 @@ function log_user_in($username, $password)
     $logged_in = false;
     
     while($row = $result->fetch_object()){
-        if($row->username == $username && $row->password == crypt($password, $row->salt)){
+        if($row->username == $username && $row->password == hash('sha256', $password.$row->salt)){
             $logged_in = true;
         }
     }
@@ -41,8 +41,8 @@ function log_user_in($username, $password)
 function register_user($username, $password)
 {
     $salt = uniqid(mt_rand(), true);
-    
-    $password = crypt($password, $salt);
+                            
+    $password = hash('sha256', $password.$salt);
     
     $query = "insert into user (username, password, salt) values (?,?,?);";
     
