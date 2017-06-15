@@ -51,7 +51,6 @@
     <?php require_once('controller.php'); ?>
     
 <body>
-    
 
     <?php if(isset($_SESSION['user'])){ ?>
     
@@ -90,10 +89,10 @@
                     
                 </form>
                 
-                <textarea class="output" style="resize:none" readonly>
-                <?php 
+                <textarea class="output" style="resize:none" readonly><?php 
                     if(isset($_SESSION['output'])){
-                        echo htmlspecialchars($_SESSION['output']); 
+                        //Verwende iconv für Umlaute
+                        echo iconv('CP850','UTF-8',$_SESSION['output']); 
                         unset($_SESSION['output']);
                     }else{ 
                         echo 'Output'; 
