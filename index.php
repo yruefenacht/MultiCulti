@@ -78,10 +78,10 @@
                 
                 <br>
                 <fieldset>
-                <input type="radio" id="print" name="sysopt" value="print" checked>
-                <label for="print">print</label>
-                <input type="radio" id="cd" name="sysopt" value="cd">
-                <label for="cd">cd</label>
+                <input type="radio" id="type" name="sysopt" value="type" checked>
+                <label for="type">type</label>
+                <input type="radio" id="echo" name="sysopt" value="echo">
+                <label for="echo">echo</label>
                 <input type="radio" id="dir" name="sysopt" value="dir">
                 <label for="dir">dir</label> 
                 <input type="radio" id="help" name="sysopt" value="help">
@@ -93,7 +93,7 @@
                 <textarea class="output" style="resize:none" readonly>
                 <?php 
                     if(isset($_SESSION['output'])){
-                        echo $_SESSION['output']; 
+                        echo htmlspecialchars($_SESSION['output']); 
                         unset($_SESSION['output']);
                     }else{ 
                         echo 'Output'; 
